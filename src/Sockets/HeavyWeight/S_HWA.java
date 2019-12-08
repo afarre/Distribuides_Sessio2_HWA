@@ -14,31 +14,54 @@ import java.net.Socket;
 
 public class S_HWA implements Runnable {
     private final static int INCOME_PORT = 33333;
-    private final static int OUTCOME_PORT = 33334;
+    private final static int OUTGOING_PORT = 33334;
+    private final static String TOKEN_B = "TOKEN_B";
+    private final static String TOKEN_A = "TOKEN_A";
 
     private DataInputStream diStream;
     private DataOutputStream doStream;
     private Socket outSocket;
-    private Socket incomeSocket;
 
-    public void createLightweights() {
-        S_LWA1 s_lwa1 = new S_LWA1();
-        S_LWA2 s_lwa2 = new S_LWA2();
-        S_LWA3 s_lwa3 = new S_LWA3();
+
+    public S_HWA(){
+        ChildCommsHWA childComms = new ChildCommsHWA(this);
+        childComms.start();
+    }
+
+    private void handShake() {
+        try {
+            doStream.writeUTF("I'm process A. Writing handshake to B.");
+            String read = diStream.readUTF();
+            System.out.println("I'm A. I received the following message: \"" + read + "\"");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
-    public void run() {
+    public synchronized void run() {
         createOutcomeConnection();
         createIncomeConnection();
-        writeToHWB();
-        readFromHWB();
+        //handShake();
+        while (true){
+            writeToHWB();
+            readFromHWB();
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     private void readFromHWB() {
         try {
             String read = diStream.readUTF();
-            System.out.println("I'm A. I recieved the follwing message: " + read);
+            if (read.equals(TOKEN_B)) {
+                System.out.println("I'm A. I received the following message: " + read);
+            }else {
+                readFromHWB();
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -46,7 +69,7 @@ public class S_HWA implements Runnable {
 
     private void writeToHWB() {
         try {
-            doStream.writeUTF("I'm A writting to B");
+            doStream.writeUTF(TOKEN_A);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -57,7 +80,7 @@ public class S_HWA implements Runnable {
             //creem el nostre socket
             ServerSocket serverSocket = new ServerSocket(INCOME_PORT);
             //esperem a la conexio del HeavyWeight_B
-            incomeSocket = serverSocket.accept();
+            Socket incomeSocket = serverSocket.accept();
             //generaNouServidorDedicat(socket);
             diStream = new DataInputStream(incomeSocket.getInputStream());
 
@@ -75,7 +98,7 @@ public class S_HWA implements Runnable {
                 iAddress = InetAddress.getLocalHost();
                 String IP = iAddress.getHostAddress();
 
-                outSocket = new Socket(String.valueOf(IP), OUTCOME_PORT);
+                outSocket = new Socket(String.valueOf(IP), OUTGOING_PORT);
                 doStream = new DataOutputStream(outSocket.getOutputStream());
             } catch (ConnectException ignored) {
             } catch (IOException e) {
@@ -88,12 +111,4 @@ public class S_HWA implements Runnable {
         }
     }
 
-    public void createChildCommunication() {
-        Thread childThread = new Thread(this);
-
-    }
-
-    public void createAnalgousCommunication() {
-
-    }
 }
