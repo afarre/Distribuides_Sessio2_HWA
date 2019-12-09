@@ -2,24 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f9f9d02-81b1-444c-ae79-7c45ded016d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sockets/HeavyWeight/ChildCommsHWA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sockets/HeavyWeight/DedicatedChildCommsHWA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sockets/LightWeight/AnalogueComms.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sockets/LightWeight/DedicatedLWA1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MainProcessB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Sockets/LightWeight/LWA2/AnalogueCommsLWA2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Sockets/LightWeight/LWA2/DedicatedLWA2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Sockets/LightWeight/LWA2/S_LWA2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Sockets/LightWeight/LWA3/AnalogueCommsLWA3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Sockets/LightWeight/LWA3/DedicatedLWA3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Sockets/LightWeight/LWA3/S_LWA3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Sockets/LightWeight/LamportRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExclusioMutuaDistribuida/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExclusioMutuaDistribuida/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ExclusioMutuaDistribuida/Main.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ExclusioMutuaDistribuida/Sockets/HeavyWeight/S_HWA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExclusioMutuaDistribuida/Sockets/HeavyWeight/S_HWA.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExclusioMutuaDistribuida/Sockets/HeavyWeight/S_HWB.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExclusioMutuaDistribuida/Sockets/HeavyWeight/S_HWB.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExclusioMutuaDistribuida/Sockets/LightWeight/S_LWA1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExclusioMutuaDistribuida/Sockets/LightWeight/S_LWA1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExclusioMutuaDistribuida/Sockets/LightWeight/S_LWA2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExclusioMutuaDistribuida/Sockets/LightWeight/S_LWA2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExclusioMutuaDistribuida/Sockets/LightWeight/S_LWA3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExclusioMutuaDistribuida/Sockets/LightWeight/S_LWA3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ExclusioMutuaDistribuida/Sockets/LightWeight/S_LWA1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ExclusioMutuaDistribuida/Sockets/LightWeight/S_LWA2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ExclusioMutuaDistribuida/Sockets/LightWeight/S_LWA3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainProcessA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sockets/HeavyWeight/ChildCommsHWA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sockets/HeavyWeight/ChildCommsHWA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sockets/HeavyWeight/DedicatedChildCommsHWA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sockets/HeavyWeight/DedicatedChildCommsHWA.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Sockets/HeavyWeight/S_HWA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sockets/HeavyWeight/S_HWA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sockets/HeavyWeight/S_HWB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sockets/HeavyWeight/S_HWB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sockets/LightWeight/S_LWA1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sockets/LightWeight/S_LWA1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sockets/LightWeight/S_LWA2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sockets/LightWeight/S_LWA2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sockets/LightWeight/S_LWA3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sockets/LightWeight/S_LWA3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sockets/LightWeight/AnalogueComms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sockets/LightWeight/LWA1/AnalogueCommsLWA1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sockets/LightWeight/DedicatedLWA1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sockets/LightWeight/LWA1/DedicatedLWA1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sockets/LightWeight/S_LWA1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sockets/LightWeight/LWA1/S_LWA1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sockets/LightWeight/S_LWA2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sockets/LightWeight/S_LWA3.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +52,12 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Sockets.LightWeight" />
+      <recent name="Sockets.LightWeight.LWA1" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -59,15 +70,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.MainProcessA">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+    <configuration name="MainProcessA" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainProcessA" />
+      <module name="ExclusioMutuaDistribuida" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainProcessB" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainProcessB" />
       <module name="ExclusioMutuaDistribuida" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -75,6 +94,14 @@
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test" />
+      <module name="ExclusioMutuaDistribuida" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -107,7 +134,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.MainProcessA" />
+        <item itemvalue="Application.test" />
+        <item itemvalue="Application.MainProcessB" />
       </list>
     </recent_temporary>
   </component>
@@ -122,6 +151,14 @@
       <option name="presentableId" value="Default" />
       <updated>1572779532738</updated>
     </task>
+    <task id="LOCAL-00001" summary="Comunicacio entre els dos HW i HWA-LWA1 implementades.">
+      <created>1575802634254</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575802634254</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -136,5 +173,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Comunicacio entre els dos HW i HWA-LWA1 implementades." />
+    <option name="LAST_COMMIT_MESSAGE" value="Comunicacio entre els dos HW i HWA-LWA1 implementades." />
   </component>
 </project>

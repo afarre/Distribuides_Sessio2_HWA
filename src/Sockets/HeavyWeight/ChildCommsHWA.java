@@ -34,5 +34,4 @@ public class ChildCommsHWA extends Thread {
         new DedicatedChildCommsHWA(socket, s_hwa).start();
     }
 
-
 }

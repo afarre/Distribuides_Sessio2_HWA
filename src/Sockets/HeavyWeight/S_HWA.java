@@ -1,9 +1,5 @@
 package Sockets.HeavyWeight;
 
-import Sockets.LightWeight.S_LWA1;
-import Sockets.LightWeight.S_LWA2;
-import Sockets.LightWeight.S_LWA3;
-
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -48,6 +44,8 @@ public class S_HWA implements Runnable {
             readFromHWB();
             try {
                 wait();
+                wait();
+                wait();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -80,7 +78,9 @@ public class S_HWA implements Runnable {
             //creem el nostre socket
             ServerSocket serverSocket = new ServerSocket(INCOME_PORT);
             //esperem a la conexio del HeavyWeight_B
+            System.out.println("Waiting for B");
             Socket incomeSocket = serverSocket.accept();
+            System.out.println("B waiting done");
             //generaNouServidorDedicat(socket);
             diStream = new DataInputStream(incomeSocket.getInputStream());
 

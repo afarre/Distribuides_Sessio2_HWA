@@ -37,8 +37,22 @@ public class DedicatedChildCommsHWA extends Thread{
 
     private void actOnRequest(String request) {
         switch (request){
-            case "test":
-                System.out.println("Switch case test in HWA.");
+            case "LWA1_DONE":
+                System.out.println("notify done in HWA from LWA1.");
+                synchronized (s_hwa){
+                    s_hwa.notify();
+                }
+                break;
+
+            case "LWA2_DONE":
+                System.out.println("notify done in HWA from LWA2.");
+                synchronized (s_hwa){
+                    s_hwa.notify();
+                }
+                break;
+
+            case "LWA3_DONE":
+                System.out.println("notify done in HWA from LWA3.");
                 synchronized (s_hwa){
                     s_hwa.notify();
                 }
