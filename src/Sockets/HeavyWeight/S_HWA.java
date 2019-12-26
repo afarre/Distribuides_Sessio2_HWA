@@ -20,8 +20,7 @@ public class S_HWA implements Runnable {
 
 
     public S_HWA(){
-        ChildCommsHWA childComms = new ChildCommsHWA(this);
-        childComms.start();
+        new ChildCommsHWA(this).start();
     }
 
     private void handShake() {
@@ -56,13 +55,18 @@ public class S_HWA implements Runnable {
         try {
             String read = diStream.readUTF();
             if (read.equals(TOKEN_B)) {
-                System.out.println("I'm A. I received the following message: " + read);
+                System.out.println("I'm A (work time for me). I received the following message: " + read);
+                childWork();
             }else {
                 readFromHWB();
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private void childWork() {
+        //TODO: COMUNICAR ALS FILLS QUE PODEN TREBALLAR
     }
 
     private void writeToHWB() {
@@ -78,9 +82,7 @@ public class S_HWA implements Runnable {
             //creem el nostre socket
             ServerSocket serverSocket = new ServerSocket(INCOME_PORT);
             //esperem a la conexio del HeavyWeight_B
-            System.out.println("Waiting for B");
             Socket incomeSocket = serverSocket.accept();
-            System.out.println("B waiting done");
             //generaNouServidorDedicat(socket);
             diStream = new DataInputStream(incomeSocket.getInputStream());
 
@@ -110,5 +112,4 @@ public class S_HWA implements Runnable {
             }
         }
     }
-
 }

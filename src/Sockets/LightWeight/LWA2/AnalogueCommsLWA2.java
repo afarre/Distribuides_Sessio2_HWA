@@ -1,5 +1,7 @@
 package Sockets.LightWeight.LWA2;
 
+import Sockets.LightWeight.LamportRequest;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -10,9 +12,11 @@ public class AnalogueCommsLWA2 extends Thread {
 
     private DedicatedLWA2 dedicatedLWA2;
     private final S_LWA2 s_lwa2;
+    private int id;
 
-    public AnalogueCommsLWA2(S_LWA2 s_lwa2) {
+    public AnalogueCommsLWA2(S_LWA2 s_lwa2, int id) {
         this.s_lwa2 = s_lwa2;
+        this.id = id;
     }
 
     @Override
@@ -30,7 +34,7 @@ public class AnalogueCommsLWA2 extends Thread {
     }
 
     private synchronized void newDedicatedAnalogueComms(Socket socket) {
-        dedicatedLWA2 = new DedicatedLWA2(socket, this);
+        dedicatedLWA2 = new DedicatedLWA2(socket, this, id);
         dedicatedLWA2.start();
         try {
             wait();
@@ -43,11 +47,11 @@ public class AnalogueCommsLWA2 extends Thread {
         }
     }
 
-    public void addToQueue(long time, String tmstp) {
-        dedicatedLWA2.addToQueue(time, tmstp);
+    public void addToQueue(long time, String tmstp, int id) {
+        dedicatedLWA2.addToQueue(time, tmstp, id);
     }
 
-    public String peekQueue() {
+    public LamportRequest peekQueue() {
         return dedicatedLWA2.peekQueue();
     }
 }

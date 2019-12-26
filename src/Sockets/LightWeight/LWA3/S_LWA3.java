@@ -26,9 +26,11 @@ public class S_LWA3 extends Thread {
     private DataOutputStream doStreamLWA2;
 
     private AnalogueCommsLWA3 analogueCommsLWA3;
+    private int id;
 
     public S_LWA3(){
-        analogueCommsLWA3 = new AnalogueCommsLWA3(this);
+        id = 3;
+        analogueCommsLWA3 = new AnalogueCommsLWA3(this, id);
         analogueCommsLWA3.start();
     }
 
@@ -44,9 +46,9 @@ public class S_LWA3 extends Thread {
 
                 long time = new java.util.Date().getTime();
                 doStreamLWA1.writeLong(time);
-                analogueCommsLWA3.addToQueue(time, TMSTP);
+                analogueCommsLWA3.addToQueue(time, TMSTP, id);
                 doStreamLWA2.writeLong(time);
-                analogueCommsLWA3.addToQueue(time, TMSTP);
+                analogueCommsLWA3.addToQueue(time, TMSTP, id);
 
                 System.out.println("Wrote to LWA1 and LWA2 from LWA3");
 
@@ -56,7 +58,7 @@ public class S_LWA3 extends Thread {
                 System.out.println("Received in LWA3: " + LWA1Timestamp);
                 System.out.println("Received in LWA3: " + LWA2Timestamp);
 
-                if (LWA1Timestamp > time && LWA2Timestamp > time && analogueCommsLWA3.peekQueue().equals(TMSTP)){
+                if (LWA1Timestamp > time && LWA2Timestamp > time && analogueCommsLWA3.peekQueue().getProcess().equals(TMSTP)){
                     System.out.println("Got both ACKs in LWA1");
                     break;
                 }

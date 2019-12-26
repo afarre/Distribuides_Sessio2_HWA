@@ -22,12 +22,14 @@ public class DedicatedLWA1 extends Thread {
 
     private Date date;
     private final AnalogueCommsLWA1 analogueCommsLWA1;
+    private int id;
 
-    public DedicatedLWA1(Socket socket, AnalogueCommsLWA1 analogueCommsLWA1) {
+    public DedicatedLWA1(Socket socket, AnalogueCommsLWA1 analogueCommsLWA1, int id) {
         this.socket = socket;
         this.analogueCommsLWA1 = analogueCommsLWA1;
         lamportQueue = new LinkedList<>();
         date = new Date();
+        this.id = id;
     }
 
     @Override
@@ -58,7 +60,7 @@ public class DedicatedLWA1 extends Thread {
             case TMSTP_LWA2:
                 System.out.println("Received LWA2 timestamp in LWA1. Answering...");
                 timeStamp = diStream.readLong();
-                lamportQueue.add(new LamportRequest(timeStamp, TMSTP_LWA2));
+                lamportQueue.add(new LamportRequest(timeStamp, TMSTP_LWA2, id));
                 timeStamp = date.getTime();
                 doStream.writeLong(timeStamp);
                 System.out.println("Answer to LWA2 from LWA1 done.");
@@ -66,7 +68,7 @@ public class DedicatedLWA1 extends Thread {
             case TMSTP_LWA3:
                 System.out.println("Received LWA3 timestamp in LWA1. Answering...");
                 timeStamp = diStream.readLong();
-                lamportQueue.add(new LamportRequest(timeStamp, TMSTP_LWA3));
+                lamportQueue.add(new LamportRequest(timeStamp, TMSTP_LWA3, id));
                 timeStamp = date.getTime();
                 doStream.writeLong(timeStamp);
                 System.out.println("Answer to LWA3 from LWA1 done.");
@@ -74,11 +76,11 @@ public class DedicatedLWA1 extends Thread {
         }
     }
 
-    public void addToQueue(long time, String tmstp) {
-        lamportQueue.add(new LamportRequest(time, tmstp));
+    public void addToQueue(long time, String tmstp, int id) {
+        lamportQueue.add(new LamportRequest(time, tmstp, id));
     }
 
-    public String peekQueue() {
-        return lamportQueue.peek().getProcess();
+    public LamportRequest peekQueue() {
+        return lamportQueue.peek();
     }
 }

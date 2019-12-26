@@ -20,12 +20,14 @@ public class DedicatedLWA3 extends Thread {
     private DataOutputStream doStream;
     private Queue<LamportRequest> lamportQueue;
     private final AnalogueCommsLWA3 analogueCommsLWA3;
+    private int id;
 
-    public DedicatedLWA3(Socket socket, AnalogueCommsLWA3 analogueCommsLWA3) {
+    public DedicatedLWA3(Socket socket, AnalogueCommsLWA3 analogueCommsLWA3, int id) {
         this.socket = socket;
         this.analogueCommsLWA3 = analogueCommsLWA3;
         lamportQueue = new LinkedList<>();
         date = new Date();
+        this.id = id;
     }
 
     @Override
@@ -55,24 +57,24 @@ public class DedicatedLWA3 extends Thread {
         switch (request){
             case TMSTP_LWA1:
                 timeStamp = diStream.readLong();
-                lamportQueue.add(new LamportRequest(timeStamp, TMSTP_LWA1));
+                lamportQueue.add(new LamportRequest(timeStamp, TMSTP_LWA1, id));
                 timeStamp = date.getTime();
                 doStream.writeLong(timeStamp);
                 break;
             case TMSTP_LWA2:
                 timeStamp = diStream.readLong();
-                lamportQueue.add(new LamportRequest(timeStamp, TMSTP_LWA2));
+                lamportQueue.add(new LamportRequest(timeStamp, TMSTP_LWA2, id));
                 timeStamp = date.getTime();
                 doStream.writeLong(timeStamp);
                 break;
         }
     }
 
-    public void addToQueue(long time, String tmstp) {
-        lamportQueue.add(new LamportRequest(time, tmstp));
+    public void addToQueue(long time, String tmstp, int id) {
+        lamportQueue.add(new LamportRequest(time, tmstp, id));
     }
 
-    public String peekQueue() {
-        return lamportQueue.peek().getProcess();
+    public LamportRequest peekQueue() {
+        return lamportQueue.peek();
     }
 }
