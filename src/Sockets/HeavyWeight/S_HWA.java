@@ -13,6 +13,7 @@ public class S_HWA implements Runnable {
     private final static int OUTGOING_PORT = 33334;
     private final static String TOKEN_B = "TOKEN_B";
     private final static String TOKEN_A = "TOKEN_A";
+    private ChildCommsHWA childCommsHWA;
 
     private DataInputStream diStream;
     private DataOutputStream doStream;
@@ -20,7 +21,8 @@ public class S_HWA implements Runnable {
 
 
     public S_HWA(){
-        new ChildCommsHWA(this).start();
+        childCommsHWA = new ChildCommsHWA(this);
+        childCommsHWA.start();
     }
 
     private void handShake() {
@@ -42,9 +44,7 @@ public class S_HWA implements Runnable {
             writeToHWB();
             readFromHWB();
             try {
-                wait();
-                wait();
-                wait();
+                this.wait();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -66,10 +66,10 @@ public class S_HWA implements Runnable {
     }
 
     private void childWork() {
-        //TODO: COMUNICAR ALS FILLS QUE PODEN TREBALLAR
+        childCommsHWA.childsWork();
     }
 
-    private void writeToHWB() {
+    public void writeToHWB() {
         try {
             doStream.writeUTF(TOKEN_A);
         } catch (IOException e) {
@@ -110,6 +110,12 @@ public class S_HWA implements Runnable {
                     wait = false;
                 }
             }
+        }
+    }
+
+    public void myNotify() {
+        synchronized (this){
+            this.notify();
         }
     }
 }

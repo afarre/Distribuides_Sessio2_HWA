@@ -1,4 +1,4 @@
-package Sockets.HeavyWeight;
+package deprecated;
 
 import Sockets.LightWeight.S_LWB1;
 import Sockets.LightWeight.S_LWB2;

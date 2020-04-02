@@ -1,5 +1,7 @@
 package Sockets.HeavyWeight;
 
+import sun.net.ConnectionResetException;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -14,9 +16,8 @@ public class DedicatedChildCommsHWA extends Thread{
     private ChildCommsHWA parent;
 
 
-    public DedicatedChildCommsHWA(Socket socket,/*, S_HWA s_hwa*/ChildCommsHWA childCommsHWA) {
+    public DedicatedChildCommsHWA(Socket socket, ChildCommsHWA childCommsHWA) {
         this.socket = socket;
-        //this.s_hwa = s_hwa;
         this.parent = childCommsHWA;
     }
 
@@ -33,6 +34,8 @@ public class DedicatedChildCommsHWA extends Thread{
             try {
                 String request = diStream.readUTF();
                 actOnRequest(request);
+            } catch (ConnectionResetException ignored){
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -46,36 +49,15 @@ public class DedicatedChildCommsHWA extends Thread{
                 System.out.println("Got ONLINE call from: " + childName);
                 interconnectChilds(childName);
                 break;
-            case "LWA1_DONE":
-                System.out.println("notify done in HWA from LWA1.");
-                /*synchronized (s_hwa){
-                    s_hwa.notify();
-                }
+            case "LWA DONE":
+                System.out.println("notify done in HWA from LWA.");
+                parent.childsDone();
 
-                 */
-                break;
-
-            case "LWA2_DONE":
-                System.out.println("notify done in HWA from LWA2.");
-               /* synchronized (s_hwa){
-                    s_hwa.notify();
-                }
-
-                */
-                break;
-
-            case "LWA3_DONE":
-                System.out.println("notify done in HWA from LWA3.");
-                /*synchronized (s_hwa){
-                    s_hwa.notify();
-                }
-
-                 */
                 break;
         }
     }
 
-    private void interconnectChilds(String childName) throws IOException {
+    private void interconnectChilds(String childName) {
         switch (childName) {
             case "LWA1":
                 parent.LWA1Online = true;
@@ -96,81 +78,20 @@ public class DedicatedChildCommsHWA extends Thread{
         if (parent.LWA1Online && parent.LWA2Online && parent.LWA3Online){
             parent.notifyChildrensToConnect();
         }
-
-        /*
-        try {
-            connectToLiveChilds(childName);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-         */
-
-    }
-
-    private void connectToLiveChilds(String childName) throws IOException {
-        //doStream.writeUTF("CONNECT");
-        System.out.println("Comunico a " + childName + " a quins altres childs s'ha de conectar.");
-        switch (childName){
-            case "LWA1":
-                if (parent.LWA2Online && parent.LWA3Online){
-                    doStream.writeInt(2);
-                    doStream.writeUTF("LWA2");
-                    doStream.writeUTF("LWA3");
-                }else if (parent.LWA2Online){
-                    doStream.writeInt(1);
-                    doStream.writeUTF("LWA2");
-                }else if (parent.LWA3Online){
-                    doStream.writeInt(1);
-                    doStream.writeUTF("LWA3");
-                }else {
-                    doStream.writeInt(0);
-                }
-                break;
-
-            case "LWA2":
-                System.out.println("-- LWA2");
-                System.out.println();
-                if (parent.LWA1Online && parent.LWA3Online){
-                    System.out.println("-- 2");
-                    doStream.writeInt(2);
-                    doStream.writeUTF("LWA1");
-                    doStream.writeUTF("LWA3");
-                }else if (parent.LWA1Online){
-                    System.out.println("-- 1 first");
-                    doStream.writeInt(1);
-                    doStream.writeUTF("LWA1");
-                }else if (parent.LWA3Online){
-                    System.out.println("-- 1 second");
-                    doStream.writeInt(1);
-                    doStream.writeUTF("LWA3");
-                }else {
-                    System.out.println(" wtf ");
-                    doStream.writeInt(0);
-                }
-                break;
-
-            case "LWA3":
-                if (parent.LWA1Online && parent.LWA2Online){
-                    doStream.writeInt(2);
-                    doStream.writeUTF("LWA1");
-                    doStream.writeUTF("LWA2");
-                }else if (parent.LWA1Online){
-                    doStream.writeInt(1);
-                    doStream.writeUTF("LWA1");
-                }else if (parent.LWA2Online){
-                    doStream.writeInt(1);
-                    doStream.writeUTF("LWA2");
-                }else {
-                    doStream.writeInt(0);
-                }
-                break;
-        }
     }
 
     public void connectToAnalogues() {
         try {
             doStream.writeBoolean(true);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void work() {
+        try {
+            System.out.println("Sending work");
+            doStream.writeUTF("WORK");
         } catch (IOException e) {
             e.printStackTrace();
         }

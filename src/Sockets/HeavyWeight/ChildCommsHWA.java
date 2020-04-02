@@ -6,15 +6,12 @@ import java.net.Socket;
 import java.util.ArrayList;
 
 public class ChildCommsHWA extends Thread {
-    private final static int OUTGOING_PORT_LWA1 = 44444;
-    private final static int OUTGOING_PORT_LWA2 = 44445;
-    private final static int OUTGOING_PORT_LWA3 = 44446;
     private final static int INCOME_PORT = 44444;
 
     public boolean LWA1Online;
     public boolean LWA2Online;
     public boolean LWA3Online;
-    private S_HWA s_hwa;
+    private S_HWA parent;
     private ArrayList<DedicatedChildCommsHWA> dedicatedChildCommsList;
 
     public ChildCommsHWA(S_HWA s_hwa) {
@@ -22,7 +19,7 @@ public class ChildCommsHWA extends Thread {
         LWA2Online = false;
         LWA3Online = false;
         dedicatedChildCommsList = new ArrayList<>();
-        this.s_hwa = s_hwa;
+        this.parent = s_hwa;
     }
 
     @Override
@@ -49,6 +46,16 @@ public class ChildCommsHWA extends Thread {
     public void notifyChildrensToConnect() {
         for (int i = 0; i < dedicatedChildCommsList.size(); i++){
             dedicatedChildCommsList.get(i).connectToAnalogues();
+        }
+    }
+
+    public void childsDone() {
+        parent.myNotify();
+    }
+
+    public void childsWork() {
+        for (DedicatedChildCommsHWA dedicatedChild : dedicatedChildCommsList) {
+            dedicatedChild.work();
         }
     }
 }
