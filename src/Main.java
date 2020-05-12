@@ -1,7 +1,7 @@
 import SharedMemory.SM_HWA;
 import Sockets.HeavyWeight.S_HWA;
 
-public class MainProcessA {
+public class Main {
     private final static int INCOME_PORT_LWA1 = 55555;
     private final static int INCOME_PORT_LWA2 = 55556;
     private final static int INCOME_PORT_LWA3 = 55557;

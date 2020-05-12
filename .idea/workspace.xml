@@ -2,30 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f9f9d02-81b1-444c-ae79-7c45ded016d7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExclusioMutuaDistribuida.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HeavyWeightA.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExclusioMutuaDistribuida/Menu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExclusioMutuaDistribuida/Sockets/HeavyWeight/S_HWA.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExclusioMutuaDistribuida/Sockets/HeavyWeight/S_HWB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExclusioMutuaDistribuida/Sockets/LightWeight/S_LWB1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ExclusioMutuaDistribuida/Sockets/LightWeight/S_LWB2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainProcessA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Sockets/HeavyWeight/ChildCommsHWA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sockets/HeavyWeight/ChildCommsHWA.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Sockets/HeavyWeight/DedicatedChildCommsHWA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sockets/HeavyWeight/DedicatedChildCommsHWA.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Sockets/HeavyWeight/S_HWA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sockets/HeavyWeight/S_HWA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sockets/HeavyWeight/S_HWB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/deprecated/S_HWB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sockets/LightWeight/LWA1/AnalogueCommsLWA1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/deprecated/LightWeight/LWA1/AnalogueCommsLWA1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sockets/LightWeight/LWA1/DedicatedLWA1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/deprecated/LightWeight/LWA1/DedicatedLWA1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sockets/LightWeight/LWA1/S_LWA1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/deprecated/LightWeight/LWA1/S_LWA1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sockets/LightWeight/LWA2/AnalogueCommsLWA2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/deprecated/LightWeight/LWA2/AnalogueCommsLWA2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sockets/LightWeight/LWA2/DedicatedLWA2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/deprecated/LightWeight/LWA2/DedicatedLWA2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sockets/LightWeight/LWA2/S_LWA2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/deprecated/LightWeight/LWA2/S_LWA2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sockets/LightWeight/LWA3/AnalogueCommsLWA3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/deprecated/LightWeight/LWA3/AnalogueCommsLWA3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sockets/LightWeight/LWA3/DedicatedLWA3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/deprecated/LightWeight/LWA3/DedicatedLWA3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sockets/LightWeight/LWA3/S_LWA3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/deprecated/LightWeight/LWA3/S_LWA3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sockets/LightWeight/LamportRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/deprecated/LightWeight/LamportRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sockets/LightWeight/S_LWB1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/deprecated/LightWeight/S_LWB1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sockets/LightWeight/S_LWB2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/deprecated/LightWeight/S_LWB2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,16 +28,15 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../HeavyWeightB" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
@@ -71,38 +52,21 @@
       <recent name="C:\Users\angel\Desktop\4t\Arquitectura Distribuida\Exercici2\Projecte\src\Sockets\LightWeight" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainProcessA">
+  <component name="RunManager">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainProcessA" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainProcessA" />
+    <configuration name="HWA" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="HeavyWeightA" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainProcessB" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainProcessB" />
-      <module name="HeavyWeightA" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test" />
-      <module name="HeavyWeightA" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -135,23 +99,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainProcessA" />
-        <item itemvalue="Application.test" />
-        <item itemvalue="Application.MainProcessB" />
+        <item itemvalue="Application.HWA" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -185,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577389719813</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Pas de token entre HWA i HWB implementat de forma ciclica.">
+      <created>1585839531547</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1585839531547</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -193,61 +150,89 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Comunicacio entre els dos HW i HWA-LWA1 implementades." />
     <MESSAGE value="Sequencia de creacio de soqckets entre els LWA afegida. Implementada cua de requests lamport i comprobacio de timestamps. Pendent que HWA gestioni els inicis dels LWA i la comprobacio segons un id propi de cada client en cas de empat de timestamps." />
     <MESSAGE value="Modificat per a que sigui nomes HeavyWeightA. Conexio amb els fills i HeavyweightB correcta." />
-    <option name="LAST_COMMIT_MESSAGE" value="Modificat per a que sigui nomes HeavyWeightA. Conexio amb els fills i HeavyweightB correcta." />
+    <MESSAGE value="Pas de token entre HWA i HWB implementat de forma ciclica." />
+    <option name="LAST_COMMIT_MESSAGE" value="Pas de token entre HWA i HWB implementat de forma ciclica." />
   </component>
   <component name="WindowStateProjectService">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585994064440">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1585994064440" />
     <state x="386" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585821906085">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="386" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1585821906085" />
-    <state x="499" y="159" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1577380596150">
+    <state x="0" y="7" key="CommitChangelistDialog2" timestamp="1585839529936">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1536.824@0.0.1536.824" timestamp="1577380596150" />
-    <state x="0" y="7" key="CommitChangelistDialog2" timestamp="1577389715130">
+    <state x="0" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585839529936" />
+    <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1588352090074">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="0" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1577389715130" />
-    <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1582658727731">
+    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588352090074" />
+    <state width="1493" height="205" key="GridCell.Tab.0.bottom" timestamp="1589277061514">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1582658727731" />
-    <state width="1493" height="294" key="GridCell.Tab.0.bottom" timestamp="1585839353406">
+    <state width="1493" height="205" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589277061514" />
+    <state width="1493" height="205" key="GridCell.Tab.0.center" timestamp="1589277061514">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="294" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585839353406" />
-    <state width="1493" height="294" key="GridCell.Tab.0.center" timestamp="1585839353406">
+    <state width="1493" height="205" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589277061514" />
+    <state width="1493" height="205" key="GridCell.Tab.0.left" timestamp="1589277061513">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="294" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585839353406" />
-    <state width="1493" height="294" key="GridCell.Tab.0.left" timestamp="1585839353406">
+    <state width="1493" height="205" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589277061513" />
+    <state width="1493" height="205" key="GridCell.Tab.0.right" timestamp="1589277061514">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="294" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585839353406" />
-    <state width="1493" height="294" key="GridCell.Tab.0.right" timestamp="1585839353406">
+    <state width="1493" height="205" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589277061514" />
+    <state width="1493" height="252" key="GridCell.Tab.1.bottom" timestamp="1588849224702">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="294" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585839353406" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1577389725914">
+    <state width="1493" height="252" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588849224702" />
+    <state width="1493" height="252" key="GridCell.Tab.1.center" timestamp="1588849224702">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1577389725914" />
-    <state x="209" y="32" key="new project wizard" timestamp="1576766202394">
+    <state width="1493" height="252" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1588849224702" />
+    <state width="1493" height="252" key="GridCell.Tab.1.left" timestamp="1588849224702">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="209" y="32" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1576766202394" />
+    <state width="1493" height="252" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1588849224702" />
+    <state width="1493" height="252" key="GridCell.Tab.1.right" timestamp="1588849224702">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="252" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1588849224702" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1585906554179">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1585906554179" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1585839536533">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1585839536533" />
+    <state x="463" y="144" width="609" height="536" key="find.popup" timestamp="1587122740235">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="463" y="144" width="609" height="536" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1587122740235" />
+    <state x="209" y="33" key="new project wizard" timestamp="1588352094525">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1588352094525" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1586691570019">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1586691570019" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ExclusioMutuaDistribuida$MainProcessA.ic" NAME="MainProcessA Coverage Results" MODIFIED="1583253664213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

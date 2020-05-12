@@ -56,7 +56,7 @@ public class S_HWA implements Runnable {
             String read = diStream.readUTF();
             if (read.equals(TOKEN_B)) {
                 System.out.println("I'm A (work time for me). I received the following message: " + read);
-                childWork();
+                childCommsHWA.childsWork();
             }else {
                 readFromHWB();
             }
@@ -65,9 +65,6 @@ public class S_HWA implements Runnable {
         }
     }
 
-    private void childWork() {
-        childCommsHWA.childsWork();
-    }
 
     public void writeToHWB() {
         try {
