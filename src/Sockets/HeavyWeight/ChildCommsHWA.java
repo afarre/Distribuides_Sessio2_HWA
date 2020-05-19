@@ -49,7 +49,7 @@ public class ChildCommsHWA extends Thread {
     }
 
     private void newDedicatedChildComms(Socket socket) {
-        DedicatedChildCommsHWA dedicatedChildCommsHWA = new DedicatedChildCommsHWA(socket/*, s_hwa*/, this);
+        DedicatedChildCommsHWA dedicatedChildCommsHWA = new DedicatedChildCommsHWA(socket, this);
         dedicatedChildCommsHWA.start();
         dedicatedChildCommsList.add(dedicatedChildCommsHWA);
     }
@@ -58,21 +58,19 @@ public class ChildCommsHWA extends Thread {
         switch (childName) {
             case LWA1:
                 LWA1Online = true;
-                System.out.println("LWA1 online to true");
                 break;
 
             case LWA2:
                 LWA2Online = true;
-                System.out.println("LWA2 online to true");
                 break;
 
             case LWA3:
                 LWA3Online = true;
-                System.out.println("LWA3 online to true");
                 break;
 
         }
         if (LWA1Online && LWA2Online && LWA3Online){
+            System.out.println("Interconnecting childs...");
             notifyChildrensToConnect();
         }
     }
@@ -88,6 +86,7 @@ public class ChildCommsHWA extends Thread {
     }
 
     public void childsWork() {
+        LWA1Executed = LWA2Executed = LWA3Executed = false;
         for (DedicatedChildCommsHWA dedicatedChild : dedicatedChildCommsList) {
             dedicatedChild.work();
         }
@@ -97,17 +96,14 @@ public class ChildCommsHWA extends Thread {
         switch (childName) {
             case LWA1:
                 LWA1Executed = true;
-                System.out.println("LWA1 executed to true");
                 break;
 
             case LWA2:
                 LWA2Executed = true;
-                System.out.println("LWA2 executed to true");
                 break;
 
             case LWA3:
                 LWA3Executed = true;
-                System.out.println("LWA3 executed to true");
                 break;
 
         }
@@ -118,5 +114,9 @@ public class ChildCommsHWA extends Thread {
 
     public boolean childsDoneStatus() {
         return LWA1Executed && LWA2Executed && LWA3Executed;
+    }
+
+    public void myNotify() {
+        parent.myNotify();
     }
 }

@@ -40,6 +40,14 @@ public class S_HWA implements Runnable {
         createOutcomeConnection();
         createIncomeConnection();
         //handShake();
+        System.out.println("Waiting for childs to connect...\n");
+        try {
+            this.wait();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Primera iteracio dels childs.");
+        //childCommsHWA.childsWork();
         while (true){
             writeToHWB();
             readFromHWB();
@@ -52,6 +60,7 @@ public class S_HWA implements Runnable {
     }
 
     private void readFromHWB() {
+        System.out.println("Reading from B");
         try {
             String read = diStream.readUTF();
             if (read.equals(TOKEN_B)) {
@@ -68,6 +77,7 @@ public class S_HWA implements Runnable {
 
     public void writeToHWB() {
         try {
+            System.out.println("Writing token to B");
             doStream.writeUTF(TOKEN_A);
         } catch (IOException e) {
             e.printStackTrace();

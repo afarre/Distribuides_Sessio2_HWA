@@ -1,11 +1,10 @@
 package Sockets.HeavyWeight;
 
-import sun.net.ConnectionResetException;
-
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
+import java.net.SocketException;
 
 public class DedicatedChildCommsHWA extends Thread{
     private Socket socket;
@@ -33,8 +32,10 @@ public class DedicatedChildCommsHWA extends Thread{
             try {
                 String request = diStream.readUTF();
                 actOnRequest(request);
-            } catch (ConnectionResetException ignored){
-
+            } catch (SocketException se){
+                    se.printStackTrace();
+                    System.err.println("Exiting...");
+                    System.exit(-1);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -49,12 +50,15 @@ public class DedicatedChildCommsHWA extends Thread{
                 parent.interconnectChilds(childName);
                 break;
             case "LWA DONE":
-                System.out.println("notify done in HWA from LWA.");
                 childName = diStream.readUTF();
+                System.out.println("Child " + childName + " has finished his execution.");
                 parent.setChildDone(childName);
                 break;
             case "RUN STATUS":
-                doStream.writeBoolean(parent.childsDoneStatus());
+                boolean status = parent.childsDoneStatus();
+                if (!status){
+                    doStream.writeBoolean(parent.childsDoneStatus());
+                }
                 break;
         }
     }
@@ -62,7 +66,7 @@ public class DedicatedChildCommsHWA extends Thread{
 
     public void connectToAnalogues() {
         try {
-            doStream.writeBoolean(true);
+            doStream.writeUTF("CONNECT");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -70,8 +74,9 @@ public class DedicatedChildCommsHWA extends Thread{
 
     public void work() {
         try {
-            System.out.println("Sending work");
-            doStream.writeUTF("WORK");
+            System.out.println("Sending false to my childs");
+            doStream.writeBoolean(false);
+            //doStream.writeUTF("WORK");
         } catch (IOException e) {
             e.printStackTrace();
         }
