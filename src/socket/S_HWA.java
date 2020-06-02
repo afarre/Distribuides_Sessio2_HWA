@@ -1,4 +1,4 @@
-package Sockets.HeavyWeight;
+package socket;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -47,7 +47,6 @@ public class S_HWA implements Runnable {
             e.printStackTrace();
         }
         System.out.println("Primera iteracio dels childs.");
-        //childCommsHWA.childsWork();
         while (true){
             writeToHWB();
             readFromHWB();
@@ -77,7 +76,7 @@ public class S_HWA implements Runnable {
 
     public void writeToHWB() {
         try {
-            System.out.println("Writing token to B");
+            System.out.println("Writing token to B\n");
             doStream.writeUTF(TOKEN_A);
         } catch (IOException e) {
             e.printStackTrace();
@@ -90,7 +89,6 @@ public class S_HWA implements Runnable {
             ServerSocket serverSocket = new ServerSocket(INCOME_PORT);
             //esperem a la conexio del HeavyWeight_B
             Socket incomeSocket = serverSocket.accept();
-            //generaNouServidorDedicat(socket);
             diStream = new DataInputStream(incomeSocket.getInputStream());
 
         } catch (IOException e) {

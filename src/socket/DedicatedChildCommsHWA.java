@@ -1,4 +1,4 @@
-package Sockets.HeavyWeight;
+package socket;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -74,9 +74,7 @@ public class DedicatedChildCommsHWA extends Thread{
 
     public void work() {
         try {
-            System.out.println("Sending false to my childs");
             doStream.writeBoolean(false);
-            //doStream.writeUTF("WORK");
         } catch (IOException e) {
             e.printStackTrace();
         }

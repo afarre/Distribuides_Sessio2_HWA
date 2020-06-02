@@ -1,4 +1,4 @@
-package Sockets.HeavyWeight;
+package socket;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -114,9 +114,5 @@ public class ChildCommsHWA extends Thread {
 
     public boolean childsDoneStatus() {
         return LWA1Executed && LWA2Executed && LWA3Executed;
-    }
-
-    public void myNotify() {
-        parent.myNotify();
     }
 }
