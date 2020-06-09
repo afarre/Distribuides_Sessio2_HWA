@@ -39,6 +39,7 @@ public class X_HWA extends Thread {
     private final static String PROCESS = "HWA";
     private final static String TOKEN = "TOKEN";
     private final static String LWA_WORK = "LWA_WORK";
+    private final static String LWA_DONE = "LWA_DONE";
 
 
     @Override
@@ -108,6 +109,31 @@ public class X_HWA extends Thread {
                 System.out.println("He rebut el token. Notificant als meus fills.");
                 outgoingDoStream.writeUTF(LWA_WORK);
                 break;
+            case "LWA DONE":
+                String childName = incomingDiStream.readUTF();
+                System.out.println("Child " + childName + " has finished his execution.");
+                setChildDone(childName);
+                break;
+        }
+    }
+
+    private void setChildDone(String childName) throws IOException {
+        switch (childName) {
+            case LWA1:
+                LWA1Executed = true;
+                break;
+
+            case LWA2:
+                LWA2Executed = true;
+                break;
+
+            case LWA3:
+                LWA3Executed = true;
+                break;
+
+        }
+        if (LWA1Executed && LWA2Executed && LWA3Executed){
+            outgoingDoStream.writeUTF(LWA_DONE);
         }
     }
 }

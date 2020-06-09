@@ -3,24 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0f9f9d02-81b1-444c-ae79-7c45ded016d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SharedMemory/SM_HWA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/xarxa/X_HWA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sockets/HeavyWeight/ChildCommsHWA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/socket/ChildCommsHWA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sockets/HeavyWeight/DedicatedChildCommsHWA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/socket/DedicatedChildCommsHWA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sockets/HeavyWeight/S_HWA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/socket/S_HWA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deprecated/LightWeight/LWA1/AnalogueCommsLWA1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deprecated/LightWeight/LWA1/DedicatedLWA1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deprecated/LightWeight/LWA1/S_LWA1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deprecated/LightWeight/LWA2/AnalogueCommsLWA2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deprecated/LightWeight/LWA2/DedicatedLWA2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deprecated/LightWeight/LWA2/S_LWA2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deprecated/LightWeight/LWA3/AnalogueCommsLWA3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deprecated/LightWeight/LWA3/DedicatedLWA3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deprecated/LightWeight/LWA3/S_LWA3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deprecated/LightWeight/LamportRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deprecated/LightWeight/S_LWB1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deprecated/LightWeight/S_LWB2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deprecated/S_HWB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/xarxa/X_HWA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/xarxa/X_HWA.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589884298109</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Afegides clases per a la comunicacio local amb una xarxa central. Comunicacio implementada fins a la primera iteracio dels LWA, sense enviament de una nova peticio al finalitzar la primera iteracio.">
+      <created>1591113139797</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1591113139797</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -191,7 +181,8 @@
     <MESSAGE value="Pas de token entre HWA i HWB implementat de forma ciclica." />
     <MESSAGE value="Modificacions per a la comunicacio amb els fills fent que s'esperin un cop s'han acabat d'executar." />
     <MESSAGE value="Funcionalitats de la practica acabades. Pendent de testejar per prevenir errors." />
-    <option name="LAST_COMMIT_MESSAGE" value="Funcionalitats de la practica acabades. Pendent de testejar per prevenir errors." />
+    <MESSAGE value="Afegides clases per a la comunicacio local amb una xarxa central. Comunicacio implementada fins a la primera iteracio dels LWA, sense enviament de una nova peticio al finalitzar la primera iteracio." />
+    <option name="LAST_COMMIT_MESSAGE" value="Afegides clases per a la comunicacio local amb una xarxa central. Comunicacio implementada fins a la primera iteracio dels LWA, sense enviament de una nova peticio al finalitzar la primera iteracio." />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590571039424">
@@ -202,30 +193,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="386" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1590504717163" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1589884296803">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1591113137307">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589884296803" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1591113137307" />
     <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1590504974489">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590504974489" />
-    <state width="1493" height="201" key="GridCell.Tab.0.bottom" timestamp="1591111765786">
+    <state width="1493" height="201" key="GridCell.Tab.0.bottom" timestamp="1591703382035">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="201" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591111765786" />
-    <state width="1493" height="201" key="GridCell.Tab.0.center" timestamp="1591111765785">
+    <state width="1493" height="201" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591703382035" />
+    <state width="1493" height="201" key="GridCell.Tab.0.center" timestamp="1591703382035">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="201" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591111765785" />
-    <state width="1493" height="201" key="GridCell.Tab.0.left" timestamp="1591111765785">
+    <state width="1493" height="201" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591703382035" />
+    <state width="1493" height="201" key="GridCell.Tab.0.left" timestamp="1591703382035">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="201" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591111765785" />
-    <state width="1493" height="201" key="GridCell.Tab.0.right" timestamp="1591111765786">
+    <state width="1493" height="201" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591703382035" />
+    <state width="1493" height="201" key="GridCell.Tab.0.right" timestamp="1591703382035">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="201" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591111765786" />
+    <state width="1493" height="201" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591703382035" />
     <state width="1493" height="252" key="GridCell.Tab.1.bottom" timestamp="1588849224702">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -246,10 +237,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1585906554179" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1589884299302">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1591113143193">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589884299302" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591113143193" />
     <state x="463" y="144" width="609" height="536" key="find.popup" timestamp="1589638981794">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
